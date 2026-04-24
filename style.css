@@ -11,7 +11,6 @@ body {
   background-attachment: fixed;
 }
 
-/* NAVBAR */
 .navbar {
   position: fixed;
   width: 100%;
@@ -22,6 +21,63 @@ body {
 .logo {
   color: red;
   font-size: 28px;
-  font-weight: bold;
+}
+
+.banner {
+  height: 600px;
+  display: flex;
+  align-items: end;
+  padding: 60px;
+}
+
+.banner h2 {
+  font-size: 70px;
+  text-shadow: 0 0 20px red;
+}
+
+.banner p {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  max-width: 600px;
+  border-left: 4px solid red;
+}
+
+button {
+  padding: 12px 25px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.play {
+  background: red;
+  color: white;
+}
+
+.row-posters {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row-posters img {
+  width: 150px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.row-posters img:hover {
+  transform: scale(1.1);
+}
+
+/* TEIA */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://pngimg.com/uploads/spider_web/spider_web_PNG12.png");
+  opacity: 0.15;
+  pointer-events: none;
 }
 
