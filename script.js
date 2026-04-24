@@ -11,3 +11,4 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres
       filmesDiv.appendChild(img);
     });
   });
+console.log("FUNCIONANDO");
