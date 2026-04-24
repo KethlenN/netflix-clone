@@ -1,40 +1,27 @@
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial;
   margin: 0;
+  font-family: Arial;
+  color: white;
+
+  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7)),
+              url("https://images.unsplash.com/photo-1509248961158-e54f6934749c");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
 }
 
 .logo {
   color: red;
-  margin-left: 20px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.navbar {
-  background: black;
-  padding: 10px;
-}
-
-.banner {
-  padding: 40px;
-  background: linear-gradient(to top, black, transparent);
-}
-
-.row {
-  margin-left: 20px;
-}
-
-.row-posters {
-  display: flex;
-  overflow-x: scroll;
-}
-
-.row-posters img {
-  width: 150px;
-  margin-right: 10px;
-  transition: 0.3s;
-}
-
-.row-posters img:hover {
-  transform: scale(1.1);
-}
