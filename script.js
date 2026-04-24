@@ -1,26 +1,9 @@
 const apiKey = "61ab23b62a2a8a0dd8d16aaef154f373";
-const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27`;
 
-fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`)
-  .then(res => res.json())
-  .then(data => {
+app.get('/filmes', async (req, res) => {
+  const response = await fetch('https://api.themoviedb.org/3/discover/movie?api_key=SUA_KEY&with_genres=27');
+  const data = await response.json();
+  res.json(data);
+});
 
-    const filmesDiv = document.getElementById("filmes");
-
-    data.results.forEach(filme => {
-      if (filme.poster_path) {
-        const img = document.createElement("img");
-        img.src = `https://image.tmdb.org/t/p/w500${filme.poster_path}`;
-        filmesDiv.appendChild(img);
-      }
-    });
-
-    const filme = data.results[0];
-
-    document.getElementById("banner").style.backgroundImage =
-      `url(https://image.tmdb.org/t/p/original${filme.backdrop_path})`;
-
-    document.getElementById("titulo").innerText = filme.title;
-    document.getElementById("descricao").innerText = filme.overview;
-
-  });
+fetch('/filmes')
