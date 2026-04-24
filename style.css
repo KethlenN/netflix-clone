@@ -1,17 +1,3 @@
-/* RESET */
-body {
-  margin: 0;
-  font-family: Arial;
-  color: white;
-
-  background:
-    linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)),
-    url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -28,12 +14,9 @@ body {
 
 /* BANNER */
 .banner {
-  height: 600px;
-  display: flex;
-  align-items: end;
-  padding: 60px;
+  background-size: cover;
+  background-position: center;
 }
-
 /* TÍTULO TERROR */
 .banner h2 {
   font-family: 'Creepster', cursive;
