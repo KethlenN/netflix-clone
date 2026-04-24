@@ -4,14 +4,14 @@ body {
   font-family: Arial;
   color: white;
 
-  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7)),
-              url("https://images.unsplash.com/photo-1509248961158-e54f6934749c");
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-
 /* NAVBAR */
 .navbar {
   position: fixed;
