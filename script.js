@@ -31,4 +31,10 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres
   })
   .catch(err => console.log("ERRO:", err));
 
+console.log("JS CARREGOU");
 
+// TESTE SIMPLES SEM API
+document.getElementById("titulo").innerText = "FILME TESTE";
+document.getElementById("descricao").innerText = "Isso é um teste funcionando";
+document.getElementById("banner").style.backgroundImage =
+  "url(https://images.unsplash.com/photo-1519681393784-d120267933ba)";
