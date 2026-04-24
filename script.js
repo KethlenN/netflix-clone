@@ -1,12 +1,10 @@
 const apiKey = "61ab23b62a2a8a0dd8d16aaef154f373";
-
 fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27`)
   .then(res => res.json())
   .then(data => {
 
     const filmesDiv = document.getElementById("filmes");
 
-    // MOSTRAR FILMES
     data.results.forEach(filme => {
       if (filme.poster_path) {
         const img = document.createElement("img");
@@ -15,7 +13,6 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres
       }
     });
 
-    // BANNER
     const filme = data.results[0];
 
     document.getElementById("banner").style.backgroundImage =
@@ -25,3 +22,5 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres
     document.getElementById("descricao").innerText = filme.overview;
 
   });
+
+
