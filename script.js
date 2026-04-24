@@ -1,6 +1,10 @@
 const apiKey = "61ab23b62a2a8a0dd8d16aaef154f373";
-
-fetch(`https://api.allorigins.win/raw?url=https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27`)
+fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27`, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+  }
+})
   .then(res => res.json())
   .then(data => {
 
@@ -14,14 +18,17 @@ fetch(`https://api.allorigins.win/raw?url=https://api.themoviedb.org/3/discover/
       }
     });
 
-    const filme = data.results[0];
+    if (data.results.length > 0) {
+      const filme = data.results[0];
 
-    document.getElementById("banner").style.backgroundImage =
-      `url(https://image.tmdb.org/t/p/original${filme.backdrop_path})`;
+      document.getElementById("banner").style.backgroundImage =
+        `url(https://image.tmdb.org/t/p/original${filme.backdrop_path})`;
 
-    document.getElementById("titulo").innerText = filme.title;
-    document.getElementById("descricao").innerText = filme.overview;
+      document.getElementById("titulo").innerText = filme.title;
+      document.getElementById("descricao").innerText = filme.overview;
+    }
 
-  });
+  })
+  .catch(err => console.log("ERRO:", err));
 
 
