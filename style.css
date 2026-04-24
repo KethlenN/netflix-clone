@@ -1,34 +1,38 @@
 body {
-  background-color: #111;
+  background-color: black;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
+  margin: 0;
 }
 
 .logo {
   color: red;
+  margin-left: 20px;
 }
 
 .navbar {
-  padding: 20px;
+  background: black;
+  padding: 10px;
 }
 
 .banner {
-  height: 300px;
-  background: url('https://via.placeholder.com/800x300') center/cover;
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
+  padding: 40px;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.row {
+  margin-left: 20px;
 }
 
 .row-posters {
   display: flex;
-  gap: 10px;
   overflow-x: scroll;
 }
 
 .row-posters img {
   width: 150px;
-  transition: transform 0.3s;
+  margin-right: 10px;
+  transition: 0.3s;
 }
 
 .row-posters img:hover {
