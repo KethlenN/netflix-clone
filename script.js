@@ -1,5 +1,4 @@
 const apiKey = "61ab23b62a2a8a0dd8d16aaef154f373";
-const apiKey = "SUA_CHAVE_AQUI";
 
 fetch(`https://api.allorigins.win/raw?url=https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27`)
   .then(res => res.json())
